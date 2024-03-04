@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="grid grid-rows-[48px,1fr] min-h-s">
+      <body className="grid grid-rows-[48px,1fr] min-h-screen">
         <div className="flex items-center justify-start bg-teal-100">
           <DrawerLeft />
         </div>

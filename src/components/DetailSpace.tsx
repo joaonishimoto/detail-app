@@ -1,8 +1,6 @@
 import { database } from "@/db/database";
 import Image from "next/image";
-import Link from "next/link";
-
-import { ArrowLeftOutlined, ArrowRightOutlined } from "@mui/icons-material";
+import Paper from '@mui/material/Paper';
 
 type DetailSpaceProps = {
   checklistId: string;
@@ -21,21 +19,24 @@ const DetailSpace: React.FC<DetailSpaceProps> = ( { checklistId } ) => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-between py-10 min-h-[calc(100vh-48px)] gap-10">
-      <h1 className="text-4xl text-teal-900">
-        {urlPart.checklist[id].title}
-      </h1>
-      <div className="flex items-center w-[50%] h-[90%] bg-teal-300">
+    <main className="flex items-center justify-center min-h-[calc(100vh-3rem)] bg-teal-900
+    w-screen sm:w-full">
+      <Paper
+        className="rounded-2xl" 
+        elevation={8}>
         <Image 
-            src="/app/img/parts/teste.png" 
-            alt="engetak logo"
-            width={0}
-            height={0}
-            style={{ width: '100%', height: '100%' }}
-            objectFit="cover"
-          />
-      </div>
-    </div>
+          className="rounded-2xl" 
+          src={"/src/db/esquadreta/01.png"}
+          alt="engetak logo"
+          width={0}
+          height={0}
+          style={{ width: '100%', height: '100%' }}
+          objectFit="cover"
+          quality={100}
+        />
+        
+      </Paper>
+    </main>
   );
 };
 

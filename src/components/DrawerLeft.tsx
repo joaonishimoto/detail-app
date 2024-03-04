@@ -1,25 +1,25 @@
 'use client'
 
-import * as React from 'react';
 import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
-import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
+import Drawer from '@mui/material/Drawer';
+import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import * as React from 'react';
 
 import RadioButtonUncheckedOutlinedIcon from '@mui/icons-material/RadioButtonUncheckedOutlined';
-import RadioButtonCheckedOutlinedIcon from '@mui/icons-material/RadioButtonCheckedOutlined';
-import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 
 import { database } from "@/db/database";
 
 import Link from 'next/link';
 
 import "@/app/global.css";
+
 
 
 export default function DrawerLeft() {
@@ -39,7 +39,7 @@ export default function DrawerLeft() {
         {database.map((part, index) => (
           <Link
             key={part.id}
-            href={`/checklist/${part.name}-0`} 
+            href={`/checklist/${part.name}-01`} 
           >
             <ListItem 
               key={part.name} 
@@ -50,7 +50,7 @@ export default function DrawerLeft() {
                 <ListItemIcon className='text-teal-800'>
                   <RadioButtonUncheckedOutlinedIcon />
                 </ListItemIcon>
-                <ListItemText primary={part.name} />
+                <ListItemText primary={part.name}/>
               </ListItemButton>
             </ListItem>
           </Link>
@@ -67,7 +67,7 @@ export default function DrawerLeft() {
         onClick={toggleDrawer(true)} 
         className='group hover:bg-teal-100' 
       >
-        <ArrowCircleLeftIcon 
+        <MenuRoundedIcon 
           className='group-hover:text-teal-900 text-teal-700'
           fontSize='large'
         />

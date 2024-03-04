@@ -30,9 +30,10 @@ const SideBar: React.FC<SideBarProps> = ( { checklistId } ) => {
   ));
 
   return (
-    <div className="border-r border-teal-300 text-teal-900 relative h-[calc(100vh-48px)] overflow-hidden">
+    <div className="hidden border-r border-teal-300 text-teal-900 relative h-[calc(100vh-48px)] overflow-hidden  
+    sm:block">
       <div className="overflow-y-scroll h-full">
-        <ul className="ml-3 text-teal-900 space-y-2 ">
+        <ul className="ml-3 text-teal-900 pt-2">
           <VerticalLinearStepper />
         </ul>
       </div>
