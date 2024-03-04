@@ -1,5 +1,6 @@
 import { database } from "@/db/database";
 import Image from "next/image";
+import VerticalLinearStepper from "./Stepper";
 
 type SideBarProps = {
   checklistId: string;
@@ -29,19 +30,10 @@ const SideBar: React.FC<SideBarProps> = ( { checklistId } ) => {
   ));
 
   return (
-    <div className="border-r border-teal-300 text-teal-900 min-h-[calc(100vh-48px)]">
-      <div className="flex items-center justify-center py-5">
-        <Image 
-          src="/engetak.png" 
-          width={50} 
-          height={50}
-          alt="engetak logo"
-          className="bg-teal-500 "
-        />
-      </div>
-      <div className="">
-        <ul className="ml-3 text-teal-900 space-y-2">
-          {checklistItems}
+    <div className="border-r border-teal-300 text-teal-900 relative h-[calc(100vh-48px)] overflow-hidden">
+      <div className="overflow-y-scroll h-full">
+        <ul className="ml-3 text-teal-900 space-y-2 ">
+          <VerticalLinearStepper />
         </ul>
       </div>
     </div>
