@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/app/global.css";
+import DrawerLeft from "@/components/DrawerLeft";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="grid grid-rows-[48px,1fr] min-h-s">
+        <div className="flex items-center justify-start bg-teal-100">
+          <DrawerLeft />
+        </div>
         {children}
       </body>
     </html>
