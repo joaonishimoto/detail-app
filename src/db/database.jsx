@@ -6,7 +6,7 @@ export const database = [
       {
         id: 0,
         title: "Cotar máximas",
-        desc: "como cotar máximas",
+        desc: "",
         url: "img/parts/teste.png"
       },
       {
@@ -14,6 +14,36 @@ export const database = [
         title: "Cotar furos",
         desc: "como cotar furos",
         url: "./img/parts/teste.png"
+      },
+      {
+        id: 2,
+        title: "Cotar ângulos",
+        desc: "como cotar ângulos",
+        url: "img/parts/teste.png"
+      },
+      {
+        id: 2,
+        title: "Cotar ângulos",
+        desc: "como cotar ângulos",
+        url: "img/parts/teste.png"
+      },
+      {
+        id: 2,
+        title: "Cotar ângulos",
+        desc: "como cotar ângulos",
+        url: "img/parts/teste.png"
+      },
+      {
+        id: 2,
+        title: "Cotar ângulos",
+        desc: "como cotar ângulos",
+        url: "img/parts/teste.png"
+      },
+      {
+        id: 2,
+        title: "Cotar ângulos",
+        desc: "como cotar ângulos",
+        url: "img/parts/teste.png"
       },
       {
         id: 2,

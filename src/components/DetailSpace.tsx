@@ -34,7 +34,6 @@ const DetailSpace: React.FC<DetailSpaceProps> = ( { checklistId } ) => {
           objectFit="cover"
           quality={100}
         />
-        
       </Paper>
     </main>
   );
